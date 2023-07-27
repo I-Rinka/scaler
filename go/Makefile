@@ -24,5 +24,5 @@ docker-build: proto
     -f Dockerfile . -t ${IMAGE_REPO}/scaler:${GIT_VERSION}
 
 proto:
-	cd proto && protoc -I ./  serverless-sim.proto --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative && cd -
+	cd proto && protoc -I ./  serverless-sim.proto --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative --experimental_allow_proto3_optional && cd -
 
